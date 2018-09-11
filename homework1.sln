@@ -3,14 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "program1\program1.csproj", "{C51F259C-16B3-453D-8FC8-BC0E39D4D082}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "homework1", "homework1", "{4757C56F-2136-45FB-9980-08A5F085AB7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program2", "program2\program2.csproj", "{4D33490A-8F46-480E-8EA8-DC26B7DBF33B}"
-	ProjectSection(ProjectDependencies) = postProject
-		{C51F259C-16B3-453D-8FC8-BC0E39D4D082} = {C51F259C-16B3-453D-8FC8-BC0E39D4D082}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "homework1\program1\program1.csproj", "{C51F259C-16B3-453D-8FC8-BC0E39D4D082}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program2", "homework1\program2\program2.csproj", "{4D33490A-8F46-480E-8EA8-DC26B7DBF33B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
