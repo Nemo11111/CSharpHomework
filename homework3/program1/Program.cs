@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace program1
 {
-
+    //
     public abstract class Shape
     {
         private string id;
@@ -25,7 +25,7 @@ namespace program1
         }
     }
 
-    //正方形类
+    //正方形类  
     public class Square:Shape
     {
         private double squareSide;
