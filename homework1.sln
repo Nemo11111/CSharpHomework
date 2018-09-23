@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program3", "homework2\progr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "homework3", "homework3", "{37C0C9D9-9BFD-445A-81B4-20AF146154E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "program1\program1.csproj", "{EA0E0579-80E1-476C-9F23-8A664F176B6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "homework3\program1\program1.csproj", "{EA0E0579-80E1-476C-9F23-8A664F176B6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
