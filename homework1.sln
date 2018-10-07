@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "homework4", "homework4", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program1", "homework4\program1\program1.csproj", "{BB22ACB9-EE93-4CC1-9D52-1B876550B2A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program2", "program2\program2.csproj", "{D93CC331-B8FD-4EFA-BF6B-A7F388F02908}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "program2", "homework4\program2\program2.csproj", "{D93CC331-B8FD-4EFA-BF6B-A7F388F02908}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
