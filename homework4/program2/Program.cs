@@ -188,14 +188,14 @@ namespace program2
                 String sGoodsNam;
                 Console.WriteLine("输入查询订单的商品名称：");
                 sGoodsNam = Console.ReadLine();
-                searchByNum(sGoodsNam);
+                searchByGoodsName(sGoodsNam);
             }
             if (s == "3")
             {
                 String sGuestName;
                 Console.WriteLine("输入查询订单的客户名称：");
                 sGuestName = Console.ReadLine();
-                searchByNum(sGuestName);
+                searchByguestName(sGuestName);
             }
         }
     }
