@@ -99,7 +99,7 @@ namespace program2
             drawLine(x0, y0, x1, y1, x2, y2);
 
             drawCayTree(n - 1, x1, y1, pre11 * len, th + th11);
-            drawCayTree(n - 1, x2, y2, pre22 * len, th + th22);
+            drawCayTree(n - 1, x2, y2, pre22 * len, th - th22);
         }
 
         void drawLine(double x0, double y0,double x1,double y1,double x2,double y2)
