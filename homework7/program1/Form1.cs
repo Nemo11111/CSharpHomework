@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using myProgram;
+using System.Xml.Serialization;
+using System.IO;
+using System.Xml;
+using System.Xml.XPath;
+using System.Xml.Xsl;
 
 namespace homework7
 {
@@ -124,6 +129,56 @@ namespace homework7
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            XmlSerializer xmlser = new XmlSerializer(typeof(List<Order>));
+            using (FileStream fs = new FileStream("myXmlFile.xml", FileMode.Create))
+            {
+                xmlser.Serialize(fs, OrderServer.Inf);
+            }
+
+            Console.WriteLine(File.ReadAllText("myXmlFile.xml"));
+            //从XML文件中载入文件
+            using (FileStream fs = new FileStream("myXmlFile.xml", FileMode.Open))
+            {
+                List<Order> persons3 = (List<Order>)xmlser.Deserialize(fs);
+                foreach (Order mine in persons3)
+                {
+                    Console.WriteLine(mine);
+                }
+            }
+            bool bFile = File.Exists("myXmlFile.xml");
+
+            if(bFile)
+            {
+                label6.Text = "导出成功！";
+            }
+            else
+            {
+                label6.Text = "导出失败！";
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(@"D:\C#Homework\CSharpHomework\homework1\homework7\program1\bin\Debug\myXmlFile.xml");
+
+                XPathNavigator nav = doc.CreateNavigator();
+                nav.MoveToRoot();
+
+                XslCompiledTransform xt = new XslCompiledTransform();
+                xt.Load(@"D:\C#Homework\CSharpHomework\homework1\homework7\program1\bin\Debug\myXmlFile.xslt");
+
+                FileStream outFileStream = File.OpenWrite(@"D:\C#Homework\CSharpHomework\homework1\homework7\program1\BoolList.html");
+                XmlTextWriter writer =
+                    new XmlTextWriter(outFileStream, System.Text.Encoding.UTF8);
+                xt.Transform(nav, null, writer);
+                
+            }
         }
     }
 }
