@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
+using MySql.Data.MySqlClient;
 
 namespace myProgram
 {
-    [Serializable]
+    //[Serializable]
+    
     public class Order
     {
             public string orderNum { get; set; }
@@ -30,7 +32,7 @@ namespace myProgram
             }
     }
 
-    [Serializable]
+    //[Serializable]
     public class OrderDetails : OrderServer
     {
         public OrderDetails() { }
@@ -80,7 +82,7 @@ namespace myProgram
         }
     }
 
-    [Serializable]
+    //[Serializable]
     public class OrderServer : Order
     {
         public OrderServer() { }
@@ -236,22 +238,22 @@ namespace myProgram
             //string xml = File.ReadAllText(xmlFileName);
             //Console.WriteLine(xml);
 
-            XmlSerializer xmlser = new XmlSerializer(typeof(List<Order>));
-            using (FileStream fs = new FileStream("myXmlFile.xml", FileMode.Create))
-            {
-                xmlser.Serialize(fs, Inf);
-            }
+            //XmlSerializer xmlser = new XmlSerializer(typeof(List<Order>));
+            //using (FileStream fs = new FileStream("myXmlFile.xml", FileMode.Create))
+            //{
+            //    xmlser.Serialize(fs, Inf);
+            //}
 
-            Console.WriteLine(File.ReadAllText("myXmlFile.xml"));
-            //从XML文件中载入文件
-            using (FileStream fs = new FileStream("myXmlFile.xml", FileMode.Open))
-            {
-                List<Order> persons3 = (List<Order>)xmlser.Deserialize(fs);
-                foreach(Order mine in persons3)
-                {
-                    Console.WriteLine(mine);
-                }
-            }
+            //Console.WriteLine(File.ReadAllText("myXmlFile.xml"));
+            ////从XML文件中载入文件
+            //using (FileStream fs = new FileStream("myXmlFile.xml", FileMode.Open))
+            //{
+            //    List<Order> persons3 = (List<Order>)xmlser.Deserialize(fs);
+            //    foreach(Order mine in persons3)
+            //    {
+            //        Console.WriteLine(mine);
+            //    }
+            //}
         }
     }
 }
